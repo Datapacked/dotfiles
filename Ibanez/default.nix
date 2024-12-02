@@ -56,6 +56,9 @@
     obsidian
     wireguard-tools
     amberol
+    proxychains-ng
+    vscodium
+    #    osu-lazer-bin
   ];
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
