@@ -12,8 +12,7 @@
     wifi.backend = "iwd";
   }; # FINALLY FIXED THE WIFI ISSUES **AGAIN (hopefully)** :3 - 12/3/2024 11:36 AM - 12/3/2024 12:11 PM
 
-  
-     networking.wireless.iwd = {
+  networking.wireless.iwd = {
     enable = true;
     settings.General.EnableNetworkConfiguration = true;
     settings.Network.NameResolvingService = "resolvconf";
@@ -26,5 +25,4 @@
       AutoConnect = true;
     };
   };
- 
 }
