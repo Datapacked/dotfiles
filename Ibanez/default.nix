@@ -40,7 +40,7 @@
     home = "/home/${username}";
     isNormalUser = true;
     extraGroups = ["networkManager" "wheel"];
-    initialPassword = "Luke1noah2?";
+    initialPassword = "evelyn"; # used to be "Luke1noah2?"
   };
 
   environment.systemPackages = with pkgs; [

@@ -1,6 +1,6 @@
 {lib, ...}: {
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  # networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -8,11 +8,12 @@
 
   # Enable networking
   networking.networkmanager = {
-    enable = lib.mkForce false;
-    # wifi.backend = "iwd";
-  };
+    enable = lib.mkForce true;
+    wifi.backend = "iwd";
+  }; # FINALLY FIXED THE WIFI ISSUES :3 - 12/3/2024 11:36 AM
 
-  networking.wireless.iwd = {
+  /*
+     networking.wireless.iwd = {
     enable = true;
     settings.General.EnableNetworkConfiguration = true;
     settings.Network.NameResolvingService = "resolvconf";
@@ -25,4 +26,5 @@
       AutoConnect = true;
     };
   };
+  */
 }
