@@ -35,6 +35,10 @@
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.0.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix = {
+      spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+      spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
+    }
   };
 
   outputs = inputs @ {

@@ -54,7 +54,7 @@
         localsend
         duckstation
         pcsx2
-        spotifywm
+        spotify
         logseq
         qbittorrent
         libreoffice

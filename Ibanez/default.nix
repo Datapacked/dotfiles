@@ -21,6 +21,7 @@
     ../nixos_modules/electron_wayland.nix
     ../nixos_modules/doas.nix
     ../nixos_modules/fonts.nix
+      (inputs.spicetify-nix.nixosModules.default)
   ];
 
   nix = {
@@ -58,6 +59,7 @@
     amberol
     proxychains-ng
     vscodium
+    easyeffects
   ];
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
