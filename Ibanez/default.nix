@@ -21,7 +21,8 @@
     ../nixos_modules/electron_wayland.nix
     ../nixos_modules/doas.nix
     ../nixos_modules/fonts.nix
-      (inputs.spicetify-nix.nixosModules.default)
+    (inputs.spicetify-nix.nixosModules.default)
+    ../nixos_modules/spicetify.nix
   ];
 
   nix = {
