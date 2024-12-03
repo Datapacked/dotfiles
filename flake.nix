@@ -57,7 +57,7 @@
           default = let
             system = "x86_64-linux";
           in
-            self.lib.systems.mkLinuxSystem "nixos" "insomniac" system stateVersion [] {};
+            self.lib.systems.mkLinuxSystem "nixos" "evelyn" system stateVersion [] {};
         };
       };
 
