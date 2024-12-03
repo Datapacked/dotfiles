@@ -60,6 +60,7 @@
         libreoffice
         discord-canary
         zotero
+        osu-lazer-bin
       ];
     };
   };

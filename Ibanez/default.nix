@@ -20,7 +20,6 @@
     ../nixos_modules/steam.nix
     ../nixos_modules/electron_wayland.nix
     ../nixos_modules/doas.nix
-    ../nixos_modules/wg-quick.nix
   ];
 
   nix = {
@@ -58,7 +57,6 @@
     amberol
     proxychains-ng
     vscodium
-    #    osu-lazer-bin
   ];
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
