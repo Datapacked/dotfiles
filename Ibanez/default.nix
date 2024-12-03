@@ -20,6 +20,7 @@
     ../nixos_modules/steam.nix
     ../nixos_modules/electron_wayland.nix
     ../nixos_modules/doas.nix
+    ../nixos_modules/fonts.nix
   ];
 
   nix = {
