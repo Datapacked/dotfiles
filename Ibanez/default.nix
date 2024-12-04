@@ -60,6 +60,10 @@
     vscodium
     easyeffects
     usbmuxd
+    openjdk
+    jdk17
+    jdk11
+    jdk8
   ];
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;

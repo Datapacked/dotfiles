@@ -76,7 +76,7 @@
     true (with (inputs.firefox-addons.packages.${pkgs.system}); [
       darkreader
       bitwarden
-      vimium
+
       omnivore
     ]) {};
 
@@ -88,7 +88,7 @@
     true (with (inputs.firefox-addons.packages.${pkgs.system}); [
       darkreader
       bitwarden
-      vimium
+
       omnivore
     ]) {};
 
@@ -99,7 +99,7 @@
     true (with (inputs.firefox-addons.packages.${pkgs.system}); [
       darkreader
       bitwarden
-      vimium
+
       omnivore
     ]) {};
 

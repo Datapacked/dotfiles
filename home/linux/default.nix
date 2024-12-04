@@ -67,6 +67,7 @@
         osu-lazer-bin
         arduino
         arduino-cli
+        tor-browser
       ];
     };
   };
