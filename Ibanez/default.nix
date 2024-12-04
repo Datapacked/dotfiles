@@ -59,6 +59,7 @@
     proxychains-ng
     vscodium
     easyeffects
+    usbmuxd
   ];
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;

@@ -60,6 +60,8 @@
         discord-canary
         zotero
         osu-lazer-bin
+        arduino
+        arduino-cli
       ];
     };
   };
