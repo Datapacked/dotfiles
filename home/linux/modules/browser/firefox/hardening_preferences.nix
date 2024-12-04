@@ -38,7 +38,7 @@
   "privacy.clearOnShutdown.cookies" = true;
   "privacy.clearOnShutdown.downloads" = true;
   "privacy.clearOnShutdown.formdata" = true;
-  "privacy.clearOnShutdown.history" = true;
+  "privacy.clearOnShutdown.history" = false;
   "privacy.clearOnShutdown.offlineApps" = true;
   "privacy.clearOnShutdown.sessions" = true;
   "privacy.clearOnShutdown.sitesettings" = true;

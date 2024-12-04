@@ -45,6 +45,16 @@
       url = "https://www.fast.com/";
       baseDomain = "fast.com";
     }
+    {
+      label = "Anilist";
+      url = "https://anilist.co/";
+      baseDomain = "anilist.co";
+    }
+    {
+      label = "Gmail";
+      url = "https://mail.google.com/";
+      baseDomain = "mail.google.com";
+    }
   ];
 
   personal_newtab = [
@@ -92,6 +102,16 @@
       label = "Fast";
       url = "https://www.fast.com/";
       baseDomain = "fast.com";
+    }
+    {
+      label = "Anilist";
+      url = "https://anilist.co/";
+      baseDomain = "anilist.co";
+    }
+    {
+      label = "Gmail";
+      url = "https://mail.google.com/";
+      baseDomain = "mail.google.com";
     }
   ];
 }

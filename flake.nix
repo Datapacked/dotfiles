@@ -27,6 +27,18 @@
       url = github:nix-community/home-manager;
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    helix = {
+      url = github:helix-editor/helix;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.0.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -49,7 +61,7 @@
           default = let
             system = "x86_64-linux";
           in
-            self.lib.systems.mkLinuxSystem "nixos" "insomniac" system stateVersion [] {};
+            self.lib.systems.mkLinuxSystem "nixos" "evelyn" system stateVersion [] {};
         };
       };
 
