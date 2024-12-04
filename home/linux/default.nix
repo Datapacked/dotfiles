@@ -55,7 +55,6 @@
         bitwarden-desktop
         wgnord
         telegram-desktop
-        wgnord
         localsend
         duckstation
         pcsx2
@@ -69,6 +68,8 @@
         arduino-cli
         tor-browser
         btop
+        gimp
+        blender
       ];
     };
   };
