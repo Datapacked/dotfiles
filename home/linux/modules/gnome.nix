@@ -91,6 +91,11 @@
         tray-pos = "right";
       };
 
+      "org/gnome/desktop/wm/keybindings" = {
+        switch-to-workspace-left = ["<Ctrl>s"];
+        switch-to-workspace-right = ["<Ctrl>g"];
+      };
+
       "org/gnome/settings-daemon/plugins/media-keys" = {
         search = ["<Control>space"];
       };

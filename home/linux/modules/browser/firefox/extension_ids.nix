@@ -9,7 +9,4 @@
   violentmonkey = "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}";
   sponsorblock = "sponsorBlocker@ajay.app";
   MAL_sync = "{c84d89d9-a826-4015-957b-affebd9eb603}";
-  omnivore = "save-extension@omnivore.app";
-  Zotero_connector = "zotero@chnm.gmu.edu";
-  TWP = "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}";
 }

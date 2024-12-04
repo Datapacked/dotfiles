@@ -52,7 +52,7 @@ in {
     };
     "${dark_reader}" = {
       install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
-      installation_mode = "force_installed";
+      installation_mode = "allowed";
     };
     "${bitwarden}" = {
       install_url = "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
@@ -68,22 +68,10 @@ in {
     };
     "${sponsorblock}" = {
       install_url = "https://addons.mozilla.org/firefox/downloads/file/4364207/sponsorblock-5.9.4.xpi";
-      installation_mode = "allowed";
+      installation_mode = "force_installed";
     };
     "${MAL_sync}" = {
       install_url = "https://addons.mozilla.org/firefox/downloads/file/4340167/mal_sync-0.10.4_FEogeJR.xpi";
-      installation_mode = "allowed";
-    };
-    "${Zotero_connector}" = {
-      install_url = "https://www.zotero.org/download/connector/dl?browser=firefox&version=5.0.147";
-      installation_mode = "force_installed";
-    };
-    "${omnivore}" = {
-      install_url = "https://addons.mozilla.org/firefox/downloads/file/4246656/omnivore-2.10.0.xpi";
-      installation_mode = "allowed";
-    };
-    "${TWP}" = {
-      install_url = "https://addons.mozilla.org/firefox/downloads/file/4245500/traduzir_paginas_web-10.0.1.1.xpi";
       installation_mode = "force_installed";
     };
   };

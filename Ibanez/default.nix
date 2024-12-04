@@ -9,7 +9,6 @@
   ...
 }: {
   imports = [
-    (inputs.lix-module.nixosModules.default)
     ./hardware-configuration.nix
     ../nixos_modules/boot.nix
     ../nixos_modules/gnome.nix
@@ -19,10 +18,9 @@
     ../home/linux
     ../nixos_modules/steam.nix
     ../nixos_modules/electron_wayland.nix
-    ../nixos_modules/doas.nix
-    ../nixos_modules/fonts.nix
-    (inputs.spicetify-nix.nixosModules.default)
-    ../nixos_modules/spicetify.nix
+    ../dual_modules
+    ../dual_modules/mullvad/nixos.nix
+    ../nixos_modules/plex.nix
   ];
 
   nix = {
@@ -42,7 +40,7 @@
     home = "/home/${username}";
     isNormalUser = true;
     extraGroups = ["networkManager" "wheel"];
-    initialPassword = "evelyn"; # used to be "Luke1noah2?"
+    initialPassword = "Luke1noah2?";
   };
 
   environment.systemPackages = with pkgs; [
@@ -56,12 +54,16 @@
     rar
     unrar
     obsidian
-    wireguard-tools
-    amberol
-    proxychains-ng
-    vscodium
-    easyeffects
   ];
+
+  dual_modules.modules = {
+    mullvad = {
+      enable = true;
+      users = {
+        "${username}".enable = true;
+      };
+    };
+  };
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [zsh];

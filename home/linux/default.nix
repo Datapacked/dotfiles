@@ -32,7 +32,6 @@
       ./modules/zsh.nix
       ./modules/obs.nix
       ./modules/browser/brave/brave.nix
-      ./modules/helix.nix
     ];
 
     home = {
@@ -50,17 +49,16 @@
         bitwarden-desktop
         wgnord
         telegram-desktop
+        mullvad-vpn
         wgnord
         localsend
         duckstation
         pcsx2
-        spotify
+        spotifywm
         logseq
         qbittorrent
         libreoffice
         discord-canary
-        zotero
-        osu-lazer-bin
       ];
     };
   };

@@ -77,7 +77,6 @@
       darkreader
       bitwarden
       vimium
-      omnivore
     ]) {};
 
   personal_profile =
@@ -89,18 +88,6 @@
       darkreader
       bitwarden
       vimium
-      omnivore
-    ]) {};
-
-  schol_profile =
-    mkProfile "schol" 4 containers.schol {
-      "extensions.autoDisableScopes" = 0;
-    }
-    true (with (inputs.firefox-addons.packages.${pkgs.system}); [
-      darkreader
-      bitwarden
-      vimium
-      omnivore
     ]) {};
 
   hardened_profile = mkProfile "hardened" 2 containers.hardened hardening_preferences true [] {};
@@ -114,7 +101,6 @@
     personal_profile
     hardened_profile
     test_profile
-    schol_profile
   ];
 in
   lib.attrsets.mergeAttrsList all_profiles
