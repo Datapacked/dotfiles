@@ -22,7 +22,11 @@
     system_config = config;
   };
 
-  home-manager.users.${username} = {pkgs, ...}: let
+  home-manager.users.${username} = {
+    inputs,
+    pkgs,
+    ...
+  }: let
   in {
     imports = [
       ./modules/browser/firefox
@@ -33,6 +37,7 @@
       ./modules/obs.nix
       ./modules/browser/brave/brave.nix
       ./modules/helix.nix
+      ./modules/spicetify.nix
     ];
 
     home = {
