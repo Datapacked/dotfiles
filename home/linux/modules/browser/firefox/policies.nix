@@ -58,10 +58,6 @@ in {
       install_url = "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
       installation_mode = "allowed";
     };
-    "${vimium}" = {
-      install_url = "https://addons.mozilla.org/firefox/downloads/latest/vimium-ff/latest.xpi";
-      installation_mode = "allowed";
-    };
     "${violentmonkey}" = {
       install_url = "https://addons.mozilla.org/firefox/downloads/latest/violentmonkey/latest.xpi";
       installation_mode = "allowed";

@@ -68,6 +68,7 @@
         arduino
         arduino-cli
         tor-browser
+        btop
       ];
     };
   };
