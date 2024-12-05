@@ -64,6 +64,7 @@
     jdk17
     jdk11
     jdk8
+    ffmpeg_6-full
   ];
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;

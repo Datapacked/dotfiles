@@ -70,6 +70,7 @@
         btop
         gimp
         blender
+        hollywood
       ];
     };
   };
