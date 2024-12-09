@@ -39,11 +39,18 @@
   users.users.${username} = {
     home = "/home/${username}";
     isNormalUser = true;
-    extraGroups = ["networkManager" "wheel"];
+    extraGroups = ["networkManager" "wheel" "tty" "dialout"];
     initialPassword = "evelyn"; # used to be "Luke1noah2?"
   };
 
+  services.usbmuxd = {
+    enable = true;
+    package = pkgs.usbmuxd2;
+  };
+
   environment.systemPackages = with pkgs; [
+    libimobiledevice
+    ifuse
     neovim
     zsh
     wget
@@ -59,7 +66,6 @@
     proxychains-ng
     vscodium
     easyeffects
-    usbmuxd
     openjdk
     jdk17
     jdk11

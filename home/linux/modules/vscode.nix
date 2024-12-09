@@ -10,7 +10,6 @@ in {
     enable = true;
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
-      vscodevim.vim
       rust-lang.rust-analyzer
       bbenoist.nix
       haskell.haskell
