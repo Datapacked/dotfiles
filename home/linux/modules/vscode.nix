@@ -18,6 +18,7 @@ in {
       extensions.vscode-marketplace.reditorsupport.r
       eamodio.gitlens
       inputs.vscoq.packages.${pkgs.system}.vscoq-client.extension
+      elmtooling.elm-ls-vscode
     ];
     userSettings = {
       "workbench.colorTheme" = "Default Dark Modern";

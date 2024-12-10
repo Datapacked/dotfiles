@@ -82,6 +82,10 @@ in {
       install_url = "https://addons.mozilla.org/firefox/downloads/file/4245500/traduzir_paginas_web-10.0.1.1.xpi";
       installation_mode = "force_installed";
     };
+    "${enhancer_for_youtube}" = {
+      install_url = "https://addons.mozilla.org/firefox/downloads/file/4393561/enhancer_for_youtube-2.0.130.1.xpi";
+      installation_mode = "force_installed";
+    };
   };
 
   ${ThirdParty}.Extensions = {

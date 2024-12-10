@@ -71,6 +71,7 @@
         gimp
         blender
         hollywood
+        virtualbox
       ];
     };
   };

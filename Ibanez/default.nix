@@ -71,8 +71,14 @@
     jdk11
     jdk8
     ffmpeg_6-full
+    # idk the gcc libs that i place here :3
     libgcc
     llvmPackages.clangUseLLVM
+    llvmPackages.libcxxStdenv
+    llvmPackages.libcxxClang
+    libcxx
+    glibc
+    stdenv
   ];
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
