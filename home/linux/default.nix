@@ -72,7 +72,7 @@
         gimp
         blender
         hollywood
-        virtualbox
+        glava
       ];
     };
   };

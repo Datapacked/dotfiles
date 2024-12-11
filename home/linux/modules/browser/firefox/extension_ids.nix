@@ -10,6 +10,6 @@
   MAL_sync = "{c84d89d9-a826-4015-957b-affebd9eb603}";
   omnivore = "save-extension@omnivore.app";
   zotero_connector = "zotero@chnm.gmu.edu";
-  TWP = "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}";
+  translate-web-pages = "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}";
   enhancer_for_youtube = "enhancerforyoutube@maximerf.addons.mozilla.org";
 }
