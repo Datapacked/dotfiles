@@ -18,7 +18,6 @@ in {
       extensions.vscode-marketplace.reditorsupport.r
       eamodio.gitlens
       inputs.vscoq.packages.${pkgs.system}.vscoq-client.extension
-      elmtooling.elm-ls-vscode
     ];
     userSettings = {
       "workbench.colorTheme" = "Default Dark Modern";
@@ -27,7 +26,9 @@ in {
       "window.enableMenuBarMnemonics" = false;
     };
   };
-
+  programs.nushell.shellAliases = {
+    code = "codium --disable-features=WaylandFractionalScaleV1";
+  };
   # See https://github.com/microsoft/vscode/issues/192590
   programs.zsh.envExtra = ''
     alias code='codium --disable-features=WaylandFractionalScaleV1'

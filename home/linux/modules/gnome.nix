@@ -51,6 +51,7 @@
           "tiling-assistant@leleat-on-github"
           "user-theme@gnome-shell-extensions.gcampax.github.com"
           "appindicatorsupport@rgcjonas.gmail.com"
+          "clipboard-history@alexsaveau.dev"
         ];
         last-selected-power-profile = "performance";
         favorite-apps = ["org.gnome.Nautilus.desktop" "firefox.desktop" "vesktop.desktop" "spotify.desktop" "steam.desktop" "codium.desktop" "net.lutris.Lutris.desktop" "Alacritty.desktop" "gnome-system-monitor.desktop"];
@@ -89,10 +90,6 @@
         icon-size = 21;
         legacy-tray-enabled = true;
         tray-pos = "right";
-      };
-
-      "org/gnome/settings-daemon/plugins/media-keys" = {
-        search = ["<Control>space"];
       };
     };
   };

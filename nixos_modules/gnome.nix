@@ -36,6 +36,7 @@
     gnomeExtensions.logo-menu
     gnomeExtensions.user-themes
     gnome-tweaks
+    gnomeExtensions.clipboard-history
   ];
 
   qt.enable = true;

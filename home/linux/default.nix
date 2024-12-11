@@ -22,11 +22,7 @@
     system_config = config;
   };
 
-  home-manager.users.${username} = {
-    inputs,
-    pkgs,
-    ...
-  }: let
+  home-manager.users.${username} = {pkgs, ...}: let
   in {
     imports = [
       ./modules/browser/firefox
@@ -38,6 +34,12 @@
       ./modules/browser/brave/brave.nix
       ./modules/helix.nix
       ./modules/spicetify.nix
+      ./modules/yazi.nix
+      ./modules/zoxide.nix
+      ./modules/zellij.nix
+      ./modules/nushell.nix
+      ./modules/signal.nix
+      ./modules/alacritty.nix
     ];
 
     home = {
@@ -53,7 +55,6 @@
         neofetch
         lutris
         bitwarden-desktop
-        wgnord
         telegram-desktop
         localsend
         duckstation

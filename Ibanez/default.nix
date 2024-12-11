@@ -9,7 +9,6 @@
   ...
 }: {
   imports = [
-    (inputs.lix-module.nixosModules.default)
     ./hardware-configuration.nix
     ../nixos_modules/boot.nix
     ../nixos_modules/gnome.nix
@@ -24,11 +23,17 @@
   ];
 
   nix = {
-    package = pkgs.nixFlakes;
+    package = pkgs.nixVersions.stable;
     extraOptions = "experimental-features = nix-command flakes";
     settings.allowed-users = ["@wheel"];
   };
+
+  system = {inherit stateVersion;};
   nixpkgs.config.allowUnfree = true;
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-27.3.11"
+  ];
 
   users.mutableUsers = false;
 
@@ -63,6 +68,7 @@
     obsidian
     wireguard-tools
     amberol
+    nushell
     proxychains-ng
     vscodium
     easyeffects
@@ -80,7 +86,7 @@
     glibc
     stdenv
   ];
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
-  environment.shells = with pkgs; [zsh];
+  programs.zsh.enable = false;
+  users.defaultUserShell = pkgs.nushell;
+  environment.shells = with pkgs; [nushell];
 }

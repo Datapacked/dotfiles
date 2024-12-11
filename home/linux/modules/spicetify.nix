@@ -15,15 +15,12 @@
       adblock
       hidePodcasts
       shuffle # shuffle+ (special characters are sanitized out of extension names)
+      lastfm
     ];
     enabledCustomApps = with spicePkgs.apps; [
       newReleases
       ncsVisualizer
     ];
-    enabledSnippets = with spicePkgs.snippets; [
-      pointer
-    ];
-
     theme = spicePkgs.themes.catppuccin;
     colorScheme = "mocha";
   };

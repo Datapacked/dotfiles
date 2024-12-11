@@ -78,6 +78,8 @@
       bitwarden
 
       omnivore
+      zotero-connector
+      translate-web-pages
     ]) {};
 
   personal_profile =

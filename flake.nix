@@ -31,10 +31,6 @@
       url = github:helix-editor/helix;
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.0.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,7 +42,7 @@
     flake-parts,
     ...
   }: let
-    stateVersion = "24.05";
+    stateVersion = "25.05";
   in
     flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [

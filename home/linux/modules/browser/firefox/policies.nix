@@ -70,15 +70,15 @@ in {
       install_url = "https://addons.mozilla.org/firefox/downloads/file/4340167/mal_sync-0.10.4_FEogeJR.xpi";
       installation_mode = "allowed";
     };
-    "${Zotero_connector}" = {
-      install_url = "https://www.zotero.org/download/connector/dl?browser=firefox&version=5.0.147";
+    "${zotero_connector}" = {
+      install_url = "https://download.zotero.org/connector/firefox/release/Zotero_Connector-5.0.147.xpi";
       installation_mode = "force_installed";
     };
     "${omnivore}" = {
       install_url = "https://addons.mozilla.org/firefox/downloads/file/4246656/omnivore-2.10.0.xpi";
       installation_mode = "allowed";
     };
-    "${TWP}" = {
+    "${translate-web-pages}" = {
       install_url = "https://addons.mozilla.org/firefox/downloads/file/4245500/traduzir_paginas_web-10.0.1.1.xpi";
       installation_mode = "force_installed";
     };
