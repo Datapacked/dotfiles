@@ -56,7 +56,6 @@
   environment.systemPackages = with pkgs; [
     libimobiledevice
     ifuse
-    neovim
     zsh
     wget
     tree

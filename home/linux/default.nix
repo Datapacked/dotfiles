@@ -48,7 +48,6 @@
 
       packages = with pkgs; [
         discord
-        neovim
         git
         vesktop
         bottles
