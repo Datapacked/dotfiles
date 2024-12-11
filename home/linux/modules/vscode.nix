@@ -24,6 +24,7 @@ in {
       "window.titleBarStyle" = "custom";
       "window.customTitleBarVisibility" = "windowed";
       "window.enableMenuBarMnemonics" = false;
+      "http.proxy" = "socks5://127.0.0.1:1080/";
     };
   };
   programs.nushell.shellAliases = {
