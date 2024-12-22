@@ -17,6 +17,7 @@ in {
       golang.go
       extensions.vscode-marketplace.reditorsupport.r
       eamodio.gitlens
+      aaron-bond.better-comments
       inputs.vscoq.packages.${pkgs.system}.vscoq-client.extension
     ];
     userSettings = {
@@ -24,7 +25,7 @@ in {
       "window.titleBarStyle" = "custom";
       "window.customTitleBarVisibility" = "windowed";
       "window.enableMenuBarMnemonics" = false;
-      "http.proxy" = "socks5://127.0.0.1:1080/";
+      # "http.proxy" = "socks5://127.0.0.1:1080/";
     };
   };
   programs.nushell.shellAliases = {

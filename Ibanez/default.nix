@@ -77,6 +77,7 @@
     jdk11
     jdk8
     ffmpeg_6-full
+    speedtest
     # idk the gcc libs that i place here :3
     libgcc
     llvmPackages.clangUseLLVM
