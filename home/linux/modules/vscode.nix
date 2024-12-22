@@ -19,6 +19,7 @@ in {
       eamodio.gitlens
       aaron-bond.better-comments
       inputs.vscoq.packages.${pkgs.system}.vscoq-client.extension
+      thenuprojectcontributors.vscode-nushell-lang
     ];
     userSettings = {
       "workbench.colorTheme" = "Default Dark Modern";
