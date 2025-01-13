@@ -1,5 +1,5 @@
 {lib, ...}: let
-  additional_filters_url = "https://gitlab.com/-/snippets/3743016/raw/main/filters.txt";
+  additional_filters_url = "https://gitlab.com/-/snippets/4789825/raw/main/snippetfile1.txt";
   unbreak_rules = import ./unbreak_rules.nix {};
 
   ENABLE_ADDITIONAL_FILTERS = true;

@@ -40,6 +40,9 @@
       ./modules/nushell.nix
       ./modules/signal.nix
       ./modules/alacritty.nix
+      ./modules/ghostty.nix
+      ./modules/lazygit.nix
+      ./modules/defaultapps.nix
     ];
 
     home = {
@@ -48,6 +51,7 @@
 
       packages = with pkgs; [
         discord
+        neovim
         git
         vesktop
         bottles

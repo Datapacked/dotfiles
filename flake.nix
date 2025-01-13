@@ -3,17 +3,17 @@
 
   inputs = {
     vscoq = {
-      url = github:coq-community/vscoq/53bc95c6e57504e11c0f785915f24b1b02707f9f;
+      url = "github:coq-community/vscoq/53bc95c6e57504e11c0f785915f24b1b02707f9f";
     };
     firefox-addons = {
-      url = gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons;
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     };
     nix-vscode-extensions = {
-      url = github:nix-community/nix-vscode-extensions;
+      url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zsh-titles = {
-      url = github:amyreese/zsh-titles;
+      url = "github:amyreese/zsh-titles";
       flake = false;
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -24,16 +24,31 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
-      url = github:nix-community/home-manager;
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     helix = {
-      url = github:helix-editor/helix;
+      url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+    };
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+    };
+    nixos-cosmic = {
+      url = "github:lilyinstarlight/nixos-cosmic";
+    };
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+    };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
     };
   };
 
@@ -60,7 +75,6 @@
             self.lib.systems.mkLinuxSystem "nixos" "evelyn" system stateVersion [] {};
         };
       };
-
       systems = ["x86_64-linux"];
     };
 }

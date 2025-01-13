@@ -12,4 +12,5 @@
   zotero_connector = "zotero@chnm.gmu.edu";
   translate-web-pages = "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}";
   enhancer_for_youtube = "enhancerforyoutube@maximerf.addons.mozilla.org";
+  redirect = "{bf70dbf9-8145-45a7-ac49-203f029f723f}";
 }

@@ -10,9 +10,10 @@
 
   newtabs = import ./newtabs.nix {};
   extensions = import ./extension_ids.nix {};
-
+  redirect = pkgs.callPackage ./redirect {redirect_id = extensions.redirect;};
   default_newtab = builtins.toJSON newtabs.default_newtab;
   personal_newtab = builtins.toJSON newtabs.personal_newtab;
+  school_newtab = builtins.toJSON newtabs.school_newtab;
 
   containers = import ./containers.nix {};
 
@@ -80,7 +81,10 @@
       omnivore
       zotero-connector
       translate-web-pages
-    ]) {};
+      redirect
+    ]) {
+      bookmarks = import ./bookmarks.nix {};
+    };
 
   personal_profile =
     mkProfile "personal" 1 containers.personal {
@@ -92,10 +96,13 @@
       bitwarden
 
       omnivore
-    ]) {};
+      zotero-connector
+      translate-web-pages
+      redirect
+      ]) {};
 
   schol_profile =
-    mkProfile "schol" 4 containers.schol {
+    mkProfile "schol" 5 containers.schol {
       "extensions.autoDisableScopes" = 0;
     }
     true (with (inputs.firefox-addons.packages.${pkgs.system}); [
@@ -111,11 +118,26 @@
     userChrome = test_userChrome;
   };
 
+  school_profile =
+    mkProfile "school" 4 containers.school {
+      "browser.newtabpage.pinned" = school_newtab;
+      "extensions.autoDisableScopes" = 0;
+    }
+    true (with (inputs.firefox-addons.packages.${pkgs.system}); [
+      darkreader
+      bitwarden
+      vimium
+      omnivore
+      zotero-connector
+      translate-web-pages
+    ]) {};
+
   all_profiles = [
     default_profile
     personal_profile
     hardened_profile
     test_profile
+    school_profile
     schol_profile
   ];
 in

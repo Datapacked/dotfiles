@@ -21,7 +21,6 @@
       newReleases
       ncsVisualizer
     ];
-    theme = spicePkgs.themes.catppuccin;
-    colorScheme = "mocha";
+    theme = spicePkgs.themes.hazy;
   };
 }

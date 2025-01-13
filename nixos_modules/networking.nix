@@ -1,5 +1,6 @@
 {lib, ...}: {
   networking.hostName = "nixos"; # Define your hostname.
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -8,7 +9,8 @@
   # Enable networking
   networking.networkmanager = {
     enable = lib.mkForce false;
-  }; # FINALLY FIXED THE WIFI ISSUES **AGAIN (hopefully)** :3 - 12/3/2024 11:36 AM - 12/3/2024 12:11 PM
+    # wifi.backend = "iwd";
+  };
 
   networking.wireless.iwd = {
     enable = true;

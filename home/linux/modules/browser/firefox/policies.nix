@@ -86,10 +86,29 @@ in {
       install_url = "https://addons.mozilla.org/firefox/downloads/file/4393561/enhancer_for_youtube-2.0.130.1.xpi";
       installation_mode = "force_installed";
     };
+    "${redirect}" = {
+      installation_mode = "allowed";
+    };
   };
 
   ${ThirdParty}.Extensions = {
     "uBlock0@raymondhill.net" = import ../shared/ublock_origin {inherit lib;};
+  };
+
+  "${extensions.redirect}" = {
+    "redirects" = {
+      "www.reddit.com" = {
+        changes = "every_time";
+        source = {
+          domain = "www.reddit.com";
+        };
+        targets = [
+          {domain = "safereddit.com";}
+          {domain = "redlib.ducks.party";}
+          {domain = "redlib.tux.pizza";}
+        ];
+      };
+    };
   };
 
   Preferences = {

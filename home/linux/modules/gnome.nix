@@ -1,4 +1,8 @@
-{username, ...}: {
+{
+  username,
+  lib,
+  ...
+}: {
   home = {
     file.".local/share/backgrounds/.background-image".source = ../../../deploy/.background-image;
     file.".local/share/backgrounds/.switcher-background-image".source = ../../../deploy/.switcher-background-image;
@@ -16,6 +20,8 @@
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
         scaling-factor = 0;
+        clock-show-weekday = true;
+        clock-format = "12h";
       };
 
       "org/gnome/mutter" = {
@@ -29,7 +35,7 @@
         picture-options = "zoom";
         picture-uri = "/home/${username}/.local/share/backgrounds/.background-image";
         picture-uri-dark = "/home/${username}/.local/share/backgrounds/.background-image";
-        primary-color = "#000000000000";
+        primary-color = "000000000000";
         secondary-color = "#000000000000";
       };
 
@@ -53,8 +59,22 @@
           "appindicatorsupport@rgcjonas.gmail.com"
           "clipboard-history@alexsaveau.dev"
         ];
+
         last-selected-power-profile = "performance";
-        favorite-apps = ["org.gnome.Nautilus.desktop" "firefox.desktop" "vesktop.desktop" "spotify.desktop" "steam.desktop" "codium.desktop" "net.lutris.Lutris.desktop" "Alacritty.desktop" "gnome-system-monitor.desktop"];
+
+        idle-delay = lib.gvariant.mkUint32 0;
+
+        favorite-apps = [
+          "org.gnome.Nautilus.desktop"
+          "firefox.desktop"
+          "vesktop.desktop"
+          "spotify.desktop"
+          "steam.desktop"
+          "codium.desktop"
+          "plex-desktop.desktop"
+          "com.mitchellh.ghostty.desktop"
+          "gnome-system-monitor.desktop"
+        ];
       };
 
       # Compiz window effect
@@ -66,6 +86,11 @@
         spring-k = 1.0;
         x-tiles = 10.0;
         y-tiles = 10.0;
+      };
+
+      # Clip-hist
+      "org/gnome/shell/extensions/clipboard-history" = {
+        history-size = 50;
       };
 
       # Mouse scroll direction
@@ -90,6 +115,12 @@
         icon-size = 21;
         legacy-tray-enabled = true;
         tray-pos = "right";
+      };
+      "org/gnome/desktop/notifications" = {
+        show-banners = false;
+      };
+      "org/gnome/settings-daemon/plugins/power" = {
+        sleep-inactive-ac-type = "nothing";
       };
     };
   };
