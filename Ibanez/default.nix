@@ -19,14 +19,10 @@
     ../nixos_modules/steam.nix
     ../nixos_modules/electron_wayland.nix
     ../nixos_modules/doas.nix
-    ../nixos_modules/wg-quick.nix
-    ../nixos_modules/wg-quick-phoenix.nix
     ../nixos_modules/fonts.nix
-    ../nixos_modules/wg-quick-NC.nix
     ../nixos_modules/xdg-portals.nix
     ../nixos_modules/hyprland.nix
     # ../nixos_modules/cosmic.nix
-    ../nixos_modules/sops.nix
   ];
 
   nix = {
@@ -101,6 +97,10 @@
     kitty
     rofi-wayland
     sops
+    (discord.override {
+      # withOpenASAR = true; # can do this here too
+      withVencord = true;
+    })
   ];
   programs.zsh.enable = false;
   users.defaultUserShell = pkgs.nushell;

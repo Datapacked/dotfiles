@@ -99,7 +99,7 @@
       zotero-connector
       translate-web-pages
       redirect
-      ]) {};
+    ]) {};
 
   schol_profile =
     mkProfile "schol" 5 containers.schol {

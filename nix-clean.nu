@@ -1,4 +1,4 @@
-def main () {
+export def main () {
   nix-env --delete-generations old
   nix-store --gc
   nix-channel --update
