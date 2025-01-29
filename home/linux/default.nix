@@ -76,6 +76,7 @@
         blender
         hollywood
         glava
+        insomnia
       ];
     };
   };

@@ -18,22 +18,17 @@
   boot.extraModulePackages = [];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/efb34cb4-3e51-4e9e-8acb-50ea9d09b752";
+    device = "/dev/disk/by-uuid/87e25f01-1835-44ca-9c86-166b895ef098";
     fsType = "ext4";
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/2EB7-E66E";
+    device = "/dev/disk/by-uuid/43A8-D7FB";
     fsType = "vfat";
     options = ["fmask=0077" "dmask=0077"];
   };
 
-  swapDevices = [
-    {
-      device = "/var/lib/swapfile";
-      size = 16 * 1024;
-    }
-  ];
+  swapDevices = [];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
@@ -44,14 +39,4 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [
-      # your Open GL, Vulkan and VAAPI drivers
-      vpl-gpu-rt # for newer GPUs on NixOS >24.05 or unstable
-      # onevpl-intel-gpu  # for newer GPUs on NixOS <= 24.05
-      # intel-media-sdk   # for older GPUs
-    ];
-  };
 }

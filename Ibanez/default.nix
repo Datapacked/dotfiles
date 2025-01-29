@@ -101,6 +101,7 @@
       # withOpenASAR = true; # can do this here too
       withVencord = true;
     })
+    efibootmgr
   ];
   programs.zsh.enable = false;
   users.defaultUserShell = pkgs.nushell;
