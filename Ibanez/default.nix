@@ -102,6 +102,7 @@
       withVencord = true;
     })
     efibootmgr
+    os-prober
   ];
   programs.zsh.enable = false;
   users.defaultUserShell = pkgs.nushell;
