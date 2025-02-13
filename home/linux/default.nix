@@ -77,6 +77,8 @@
         hollywood
         glava
         insomnia
+        ruffle
+        rustdesk
       ];
     };
   };
